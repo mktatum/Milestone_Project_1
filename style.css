@@ -1,18 +1,44 @@
 
 body{
-    background-color: royalblue;
+    background-color: gray;
 }
 .choiceBtn{
     line-height: 30px;
     width: 150px;
+    background-color: #338bba;
+    border: 3px solid white;
+    border-radius: 3px;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 30px;
 }
 #gameDiv{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border: 2px solid black;
     border-radius: 25px;
-    padding: 10px;
-    background-color: gray;
+    background-color: #043c7c;
     text-align: center;
+    padding: 30px;
+}
+.photoflexbox{
+    display: inline-flex;
+    margin-bottom: 40px;
+}
+.btnoptions{
+    width: 100px;
+    flex-direction: column;
+    align-self: center;
+    margin-right: 40px;
+    margin-top: 50px;
+}
+.sheldonsgame{
+    margin-right: 30px;
+    margin-top: 30px;
+    width: 350px;
+}
+.gametitle{
+    color: white;
+    align-self: center;
 }
 #playerText{
     color: yellow;
@@ -22,4 +48,111 @@ body{
 }
 #resultText{
     color: yellow;
+}
+.bazinga{
+    display: none;
+    margin: 0 auto;
+}
+.bigbangbanner{
+    width: 600px;
+}
+
+.howtobutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+p {
+    font-size: 19px;
+    align-items: center;
+}
+.howtobutton a {
+    display: inline-block;
+    padding: 15px;
+    border-radius: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: yellow;
+}
+.popup {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(106, 106, 106, 0.7);
+    transition: all 0.4s;
+    visibility: hidden;
+    opacity: 0;
+}
+.bazinga-popup {
+    width: 350px;
+    height: 300px;
+}
+.content {
+    position: absolute;
+    background: white;
+    width: 450px;
+    padding: 1em 2em;
+    border-radius: 10px;
+}
+.popup:target {
+    visibility: visible;
+    opacity: 1;
+}
+.box-close {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    color: #fe0606;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+@keyframes fadeInOut {
+        0% { opacity: 0; }
+        50% { opacity: 1; }
+        100% { opacity: 0; }
+}
+.bazinga {
+    opacity: 0; /* Initially hidden */
+    animation: fadeInOut 2s ease-in-out 3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Positions on top of other divs */
+}
+
+@-webkit-keyframes blinker {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+.flashbutton {
+    -webkit-animation: blinker 2s 4;
+    -moz-animation: blinker 2s 4;
+    animation: blinker 2s 4;
+}
+@media (max-width: 800px) {
+    .bigbangbanner {
+        width: 85%;
+    }
+    .sheldonsgame {
+        width: 60%;
+    }
+    .btnoptions {
+        display: block;
+    }
+    .choiceBtn {
+        width: 100px;
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
+    .bazinga {
+        width: 90%;
+    }
 }

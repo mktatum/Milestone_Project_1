@@ -7,16 +7,69 @@
     <title>Rock Paper Scissors Lizard Spock</title>
 </head>
 <body>
+    <!--This image will fade in/out upon player win-->
+    <div id="imageContainer">
+        <img class="bazinga" src="/assets/bazinga_nobg_copy.png" alt="Bazinga you won!"/>
+    </div>
     <div id="gameDiv">
+        <div class="gameDivContent">
+        <h2 class="gametitle">Enjoy Sheldon Cooper's favorite game!</h2>
+        <h1 class="gametitle">ROCK, PAPER, SCISSORS, LIZARD, SPOCK</h1>
+        <img class="bigbangbanner" src="/assets/Big_Bang_banner.png" alt="Big Bang Theory pixelated character banner"/>
+
+        <!--Pop-up feature to show game outcomes-->
+        <div class="howtobutton">
+            <a href="#popup-box" class="flashbutton"><b>Here's how to play</b></a>
+        </div>
+        <!--Pop-up content-->
+        <div id="popup-box" class="popup">
+            <div class="content">
+                <img class="bazinga-popup" src="/assets/bazinga_nobg_copy.png" alt="Bazinga you won!"/>
+                <p>
+                    <b>Player, choose a selection from the options on the screen. Your opponent will choose as well.<br><br>According to Sheldon,<br>the possible outcomes are listed below:</b>
+                </p>    
+                <p>
+                    Scissors cuts Paper,<br>
+                    Paper covers Rock,<br>
+                    Rock crushes Lizard,<br>
+                    Lizard poisons Spock,<br>
+                    Spock smashes Scissors,<br>
+                    Scissors decapitates Lizard,<br>
+                    Lizard eats Paper,<br>
+                    Paper disproves Spock,<br>
+                    Spock vaporizes Rock,<br>
+                    and as always....Rock crushes Scissors.
+                </p>
+                <h1 style="color: #043c7c;">
+                    Ready? Get set...<br>Player: GO!!
+                </h1>
+                <a href="#" class="box-close">
+                    ×
+                </a>
+            </div>
+        </div>
+        <!--End pop-up content-->
+
+        <!--Player buttons to choose from-->
+        <div class="photoflexbox">
+            <div>
+                <img class="sheldonsgame" src="/assets/game_chart4.png" alt="Rock Paper Scissors Lizard Spock chart"/>
+            </div>
+            <div class="btnoptions">    
+                <button class="choiceBtn">ROCK</button>
+                <button class="choiceBtn">PAPER</button>
+                <button class="choiceBtn">SCISSORS</button>
+                <button class="choiceBtn">LIZARD</button>
+                <button class="choiceBtn">SPOCK</button>
+            </div>
+        </div>
+        
+        <!--Player/Opponent choice display-->
         <h1 class="gameText" id="playerText">Player: </h1>
         <h1 class="gameText" id="computerText">Computer: </h1>
-        <h1 class="gameText" id="resultText">Result: </h1>
-
-        <button class="choiceBtn">ROCK</button>
-        <button class="choiceBtn">PAPER</button>
-        <button class="choiceBtn">SCISSORS</button>
-        <button class="choiceBtn">LIZARD</button>
-        <button class="choiceBtn">SPOCK</button>
+        </div>
+        <h1 class="gameText" id="resultText"></h1>
+        <button id="refreshButton"><b>I want another round!</b></button>
     </div>
     <script src="index.js"></script>
 </body>
