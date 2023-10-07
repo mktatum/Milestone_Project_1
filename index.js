@@ -26,28 +26,55 @@ function computerTurn(){
             return "SPOCK";
     }
 }
+// let item =
+// {
+//     player: "ROCK",
+//     draw: {
+//         values: ["ROCK"],
+//         message: "It's a draw."
+//     },
+//     wins: {
+//         values: ["SCISSORS", "LIZARD"],
+//         message: ["Bazinga! Rock crushes SCISSORS.", "Bazinga! Rock crushes LIZARD."]
+//     },
+//     losses: ["PAPER", "SPOCK"],
+
+//     checkWinner = function(computer) {
+//        if (this.draw.values.includes(computer))
+//        {
+//         return this.draw.message;
+//        } else (this.wins.values.includes(computer))
+//        {
+//         this.showBazinga()
+//         return this.wins.message[this.wins.values.indexOf(computer)]
+//        }
+//     },
+
+//        showBazinga = function()
+//        {
+//         document.querySelector('.bazinga').style.display = "block";
+//         document.querySelector('.gameDivContent').style.opacity = "0";
+//        }
+//     }
+
 
 function checkWinner(player, computer){
-    
 // Player chooses rock
     if ((player === "ROCK") && (computer === "ROCK")) {
         return "It's a draw.";
     } else if((player === "ROCK") && (computer === "PAPER")) {
         return "Oops! Paper covers rock.";
     } else if ((player === "ROCK") && (computer === "SCISSORS")) {
-        document.querySelector('.bazinga').style.display = "block";
-        document.querySelector('.gameDivContent').style.opacity = "0";
+        showBazinga();
         return "BAZINGA! Rock crushes scissors.";
     } else if((player === "ROCK") && (computer === "LIZARD")) {
-        document.querySelector('.bazinga').style.display = "block";
-        document.querySelector('.gameDivContent').style.opacity = "0";
+        showBazinga();
         return "BAZINGA! Rock crushes lizard.";
     } else if((player === "ROCK") && (computer === "SPOCK")) {
         return "Oops! Spock vaporizes rock.";
 // Player chooses paper
     } else if((player === "PAPER") && (computer === "ROCK")) {
-        document.querySelector('.bazinga').style.display = "block";
-        document.querySelector('.gameDivContent').style.opacity = "0";
+        showBazinga();
         return "BAZINGA! Paper covers rock.";
     } else if((player === "PAPER") && (computer === "PAPER")) {
         return "It's a draw.";
@@ -56,21 +83,18 @@ function checkWinner(player, computer){
     } else if((player === "PAPER") && (computer === "LIZARD")) {
         return "Oops! Lizard eats paper.";
     } else if((player === "PAPER") && (computer === "SPOCK")) {
-        document.querySelector('.bazinga').style.display = "block";
-        document.querySelector('.gameDivContent').style.opacity = "0";
+        showBazinga();
         return "BAZINGA! Paper disproves Spock.";
 // Player chooses scissors
     } else if((player === "SCISSORS") && (computer === "ROCK")) {
         return "Oops! Rock crushes scissors.";
     } else if((player === "SCISSORS") && (computer === "PAPER")) {
-        document.querySelector('.bazinga').style.display = "block";
-        document.querySelector('.gameDivContent').style.opacity = "0";
+        showBazinga();
         return "BAZINGA! Scissors cut paper.";
     } else if ((player === "SCISSORS") && (computer === "SCISSORS")) {
         return "It's a draw.";
     } else if((player === "SCISSORS") && (computer === "LIZARD")) {
-        document.querySelector('.bazinga').style.display = "block";
-        document.querySelector('.gameDivContent').style.opacity = "0";
+        showBazinga();
         return "BAZINGA! Scissors decapitates lizard.";
     } else if((player === "SCISSORS") && (computer === "SPOCK")) {
         return "Oops! Spock smashes scissors.";
@@ -78,27 +102,23 @@ function checkWinner(player, computer){
     } else if((player === "LIZARD") && (computer === "ROCK")) {
         return "Oops! Rock crushes lizard.";
     } else if((player === "LIZARD") && (computer === "PAPER")) {
-        document.querySelector('.bazinga').style.display = "block";
-        document.querySelector('.gameDivContent').style.opacity = "0";
+        showBazinga();
         return "BAZINGA! Lizard eats paper.";
     } else if ((player === "LIZARD") && (computer === "SCISSORS")) {
         return "Oops! Scissors decapitates lizard.";
     } else if((player === "LIZARD") && (computer === "LIZARD")) {
         return "It's a draw.";
     } else if((player === "LIZARD") && (computer === "SPOCK")) {
-        document.querySelector('.bazinga').style.display = "block";
-        document.querySelector('.gameDivContent').style.opacity = "0";
+        showBazinga();
         return "BAZINGA! Lizard poisons Spock.";
 // Player chooses Spock
     } else if((player === "SPOCK") && (computer === "ROCK")) {
-        document.querySelector('.bazinga').style.display = "block";
-        document.querySelector('.gameDivContent').style.opacity = "0";
+        showBazinga();
         return "BAZINGA! Spock vaporizes rock.";
     } else if((player === "SPOCK") && (computer === "PAPER")) {
         return "Oops! Paper disproves Spock.";
     } else if ((player === "SPOCK") && (computer === "SCISSORS")) {
-        document.querySelector('.bazinga').style.display = "block";
-        document.querySelector('.gameDivContent').style.opacity = "0";
+        showBazinga();
         return "BAZINGA! Spock smashes scissors.";
     } else if((player === "SPOCK") && (computer === "LIZARD")) {
         return "Oops! Lizard poisons Spock.";
@@ -107,6 +127,11 @@ function checkWinner(player, computer){
     }    
 }
 
+function showBazinga()
+{
+    document.querySelector('.bazinga').style.display = "block";
+    document.querySelector('.gameDivContent').style.opacity = "0";
+}
 // Get a reference to the .bazinga element
 var bazingaElement = document.querySelector('.bazinga');
 
