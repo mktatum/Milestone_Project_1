@@ -26,8 +26,9 @@ function computerTurn(){
             return "SPOCK";
     }
 }
+// NEW TEST JS CODE {
 // let item =
-// {
+// { //Player chooses ROCK
 //     player: "ROCK",
 //     draw: {
 //         values: ["ROCK"],
@@ -35,28 +36,77 @@ function computerTurn(){
 //     },
 //     wins: {
 //         values: ["SCISSORS", "LIZARD"],
-//         message: ["Bazinga! Rock crushes SCISSORS.", "Bazinga! Rock crushes LIZARD."]
+//         message: ["Bazinga! Rock crushes Scissors.", "Bazinga! Rock crushes Lizard."]
 //     },
 //     losses: ["PAPER", "SPOCK"],
+//     //End of player chooses ROCK
+//     //Player chooses PAPER
+//     player: "PAPER",
+//     draw: {
+//         values: ["PAPER"],
+//         message: "It's a draw."
+//     },
+//     wins: {
+//         values: ["ROCK", "SPOCK"],
+//         message: ["Bazinga! Paper covers Rock.", "Bazinga! Paper disproves Spock."]
+//     },
+//     losses: ["SCISSORS", "LIZARD"],
+//     //End of player chooses PAPER
+//     //Player chooses SCISSORS
+//     player: "SCISSORS",
+//     draw: {
+//         values: ["SCISSORS"],
+//         message: "It's a draw."
+//     },
+//     wins: {
+//         values: ["PAPER", "LIZARD"],
+//         message: ["Bazinga! Scissors cuts Paper.", "Bazinga! Scissors decapitates Lizard."]
+//     },
+//     losses: ["ROCK", "SPOCK"],
+//     //End of player chooses SCISSORS
+//     //Player chooses LIZARD
+//     player: "LIZARD",
+//     draw: {
+//         values: ["LIZARD"],
+//         message: "It's a draw."
+//     },
+//     wins: {
+//         values: ["SPOCK", "PAPER"],
+//         message: ["Bazinga! Lizard poisons Spock.", "Bazinga! Lizard eats Paper."]
+//     },
+//     losses: ["ROCK", "SPOCK"],
+//     //End of player chooses LIZARD
+//     //Player chooses SPOCK
+//     player: "SPOCK",
+//     draw: {
+//         values: ["SPOCK"],
+//         message: "It's a draw."
+//     },
+//     wins: {
+//         values: ["ROCK", "SCISSORS"],
+//         message: ["Bazinga! Spock vaporizes Rock.", "Bazinga! Spock smashes Scissors."]
+//     },
+//     losses: ["ROCK", "SPOCK"],
+//     //End of player chooses SPOCK
 
 //     checkWinner = function(computer) {
-//        if (this.draw.values.includes(computer))
-//        {
-//         return this.draw.message;
-//        } else (this.wins.values.includes(computer))
-//        {
-//         this.showBazinga()
-//         return this.wins.message[this.wins.values.indexOf(computer)]
-//        }
+//         if (this.draw.values.includes(computer))
+//         {
+//             return this.draw.message;
+//         } else (this.wins.values.includes(computer))
+//         {
+//             this.showBazinga()
+//             return this.wins.message[this.wins.values.indexOf(computer)]
+//         }
 //     },
 
-//        showBazinga = function()
-//        {
-//         document.querySelector('.bazinga').style.display = "block";
-//         document.querySelector('.gameDivContent').style.opacity = "0";
-//        }
-//     }
-
+//     showBazinga = function()
+//         {
+//             document.querySelector('.bazinga').style.display = "block";
+//             document.querySelector('.gameDivContent').style.opacity = "0";
+//         }
+// }
+// }
 
 function checkWinner(player, computer){
 // Player chooses rock
