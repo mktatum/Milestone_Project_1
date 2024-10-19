@@ -1,0 +1,149 @@
+@import "functions";
+@import "variables";
+@import "keyframes";
+@import "mixins";
+
+body {
+  background-color: $bgcolor;
+  #imageContainer {
+    .bazinga {
+      display: none;
+      margin: 0 auto;
+      opacity: 0; /* Initially hidden */
+      animation: fadeInOut 2s ease-in-out 3;
+      position: absolute;
+      @include center;
+      z-index: 1; /* Positions on top of other divs */
+      @include mobile {
+        width: 90%;
+      }
+    }
+  }
+  #gameDiv {
+    font-family: $font-family;
+    border: 2px solid $black;
+    border-radius: 25px;
+    background-color: $navy;
+    text-align: center;
+    padding: 30px;
+
+    .gameDivContent {
+    }
+    .gametitle {
+      color: $white;
+      align-self: center;
+    }
+    .bigbangbanner {
+      width: rem(600px);
+      @include mobile {
+        width: 85%;
+      }
+    }
+    .howtobutton {
+      @include flexcenter;
+
+      .flashbutton {
+        display: inline-block;
+        padding: 15px;
+        border-radius: 3px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $gametext;
+        -webkit-animation: blinker 2s 4;
+        -moz-animation: blinker 2s 4;
+        animation: blinker 2s 4;
+      }
+    }
+    .popup {
+      // also named #popup-box
+      @include flexcenter;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: $popupbg;
+      transition: all 0.4s;
+      visibility: hidden;
+      opacity: 0;
+      &:target {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .content {
+        position: absolute;
+        background: $white;
+        width: rem(450px);
+        padding: 1em 2em;
+        border-radius: 10px;
+
+        .bazinga-popup {
+          width: $width;
+          height: rem(300px);
+        }
+        p {
+          font-size: 19px;
+          align-items: center;
+        }
+        h1 {
+        }
+        .box-close {
+          position: absolute;
+          top: 0;
+          right: 15px;
+          color: $red;
+          text-decoration: none;
+          font-size: 30px;
+        }
+      }
+    }
+    .photoflexbox {
+      display: inline-flex;
+      margin-bottom: rem(40px);
+
+      .sheldonsgame {
+        margin-right: 30px;
+        margin-top: 30px;
+        width: $width;
+        @include mobile {
+          width: 60%;
+        }
+      }
+      .btnoptions {
+        width: 100px;
+        flex-direction: column;
+        align-self: center;
+        margin-right: 40px;
+        margin-top: 50px;
+        @include mobile {
+          display: block;
+        }
+
+        .choiceBtn {
+          line-height: 30px;
+          width: 150px;
+          background-color: $blue;
+          border: 3px solid $white;
+          border-radius: 3px;
+          text-decoration: none;
+          color: $white;
+          margin-bottom: 30px;
+          &:hover {
+            background-color: $navy;
+          }
+          @include mobile {
+            width: 100px;
+            line-height: 20px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+    .gameText {
+      color: $gametext;
+    }
+    #refreshButton {
+    }
+  }
+}

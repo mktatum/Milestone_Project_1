@@ -1,0 +1,17 @@
+{
+    "name": "sheldons_game",
+    "version": "2.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "dev": "sass --watch style.scss style.css"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "sass": "^1.79.4"
+    }
+  }
+  
