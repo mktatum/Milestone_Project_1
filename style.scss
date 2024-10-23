@@ -4,6 +4,9 @@
 @import "mixins";
 
 body {
+  #{headings(1,6)} {
+    color: white;
+  }
   background-color: $bgcolor;
   #imageContainer {
     .bazinga {

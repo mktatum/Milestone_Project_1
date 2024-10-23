@@ -1,3 +1,17 @@
+@use "sass:map";
+
 @function rem($px) {
   @return $px/16px * 1rem;
+}
+
+@function headings($from: 1, $to: 6) {
+  @if $from == $to {
+    @return "h#{$from}";
+  } @else if $from > $to {
+    @error "The from argument cannot be greater than the to argument.";
+  } @else if $from > 5 {
+    @error "The from argument cannot be greater than 5.";
+  } @else {
+    @return "h#{$from}," + headings($from + 1, $to);
+  }
 }

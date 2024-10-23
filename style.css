@@ -23,6 +23,9 @@
 body {
   background-color: gray;
 }
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  color: white;
+}
 body #imageContainer .bazinga {
   display: none;
   margin: 0 auto;
